@@ -10,3 +10,6 @@ def all_coffees(request):
 def coffee_details(request, coffee_id):
     coffee = get_object_or_404(CoffeeVariety, pk=coffee_id)
     return render(request, 'coffee/coffee_detail.html', {'coffee': coffee})
+
+def coffee_store_view(request):
+    return render(request, 'coffee/coffee_stores.html')
