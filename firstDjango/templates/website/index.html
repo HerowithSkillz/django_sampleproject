@@ -1,13 +1,10 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Django Project</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
-    <h1>First Django Project</h1>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<h1 class="bg-blue-500 text-3xl">Coffee and Code | Home Page</h1>
+<p>Welcome to the Coffee and Code website!</p>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<h1>The coffee is all for you</h1>
+
+<div class="grid grid-cols-3 gap-4 m-4">
+{% for coffee in coffeeis %}
+    <div class="bg-blue-600 p-5" >
+        <img class="rounded-2xl" src="{{coffee.image.url}}" alt="">
+        <h3 class="text-2xl font-bold">{{coffee.name}}</h3>
+        <a href="{% url 'coffee_detail' coffee.id %}">
+            <button class="bg-white text-blue-600 px-4 py-2 rounded-full">
+                {{coffee.type}} - {{coffee.id}}
+            </button>
+        </a>
+        test
+    </div>
+{% endfor %}
+</div>
+{% endblock %}
+
+
